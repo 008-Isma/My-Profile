@@ -131,7 +131,7 @@
 </html> -->
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
@@ -483,5 +483,986 @@
       GitHub: Ismawati | P1
     </footer>
   </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ismawati | My Profile</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #172337;
+      --navy-light: #26364e;
+      --gold: #c9a45c;
+      --gold-light: #e8d4a2;
+      --marble: #f5f1e8;
+      --white: #fffdf8;
+      --text: #263044;
+      --muted: #6e7480;
+      --border: #e5dcc9;
+      --shadow: 0 12px 35px rgba(23, 35, 55, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--marble);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    /* NAVBAR */
+    header {
+      background: var(--navy);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, .15);
+    }
+
+    .navbar {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-family: "Cinzel", serif;
+      color: var(--gold-light);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color: #e9e5dc;
+      text-decoration: none;
+      font-size: 12px;
+      padding: 8px 0;
+      border-bottom: 2px solid transparent;
+      transition: .25s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--gold-light);
+      border-bottom-color: var(--gold);
+    }
+
+    /* PAGE NAVIGATION */
+    .page {
+      display: none;
+      animation: appear .35s ease;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* HOME */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 50% 0%, #34435b 0%, transparent 55%),
+        var(--navy);
+      color: var(--white);
+      text-align: center;
+      min-height: 520px;
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 65px 20px;
+    }
+
+    .hero:not(.active) {
+      display: none !important;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "✦";
+      position: absolute;
+      color: rgba(201, 164, 92, .25);
+      font-size: 100px;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      top: 35px;
+      left: 9%;
+    }
+
+    .hero::after {
+      bottom: 25px;
+      right: 10%;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .profile {
+      width: 145px;
+      height: 145px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--gold);
+      padding: 5px;
+      background: var(--navy);
+      box-shadow: 0 0 0 8px rgba(201, 164, 92, .12);
+      margin-bottom: 22px;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      font-size: 12px;
+      letter-spacing: 4px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .hero h1 {
+      font-family: "Cinzel", serif;
+      font-size: clamp(34px, 6vw, 58px);
+      line-height: 1.25;
+      color: var(--white);
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero-description {
+      color: #d4d9e0;
+      margin: 12px 0 25px;
+      font-size: 15px;
+    }
+
+    .hero-button {
+      display: inline-block;
+      padding: 11px 23px;
+      border: 1px solid var(--gold);
+      border-radius: 4px;
+      background: var(--gold);
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .hero-button:hover {
+      background: transparent;
+      color: var(--gold-light);
+      transform: translateY(-3px);
+    }
+
+    /* CONTENT */
+    main {
+      min-height: 500px;
+      padding: 55px 0;
+    }
+
+    .section {
+      scroll-margin-top: 90px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .section-number {
+      color: var(--gold);
+      font-family: "Cinzel", serif;
+      font-size: 12px;
+      letter-spacing: 3px;
+      font-weight: 700;
+    }
+
+    .section-heading h2 {
+      font-family: "Cinzel", serif;
+      font-size: clamp(22px, 4vw, 32px);
+      color: var(--navy);
+      margin: 3px 0 7px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--gold);
+      margin-top: 8px;
+    }
+
+    .ornament::before,
+    .ornament::after {
+      content: "";
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 23px;
+      box-shadow: var(--shadow);
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 35px rgba(23, 35, 55, .15);
+    }
+
+    .card h3 {
+      font-family: "Cinzel", serif;
+      color: var(--navy);
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* ABOUT */
+    .motivation {
+      text-align: center;
+      max-width: 780px;
+      margin: auto;
+      background: linear-gradient(135deg, #fffdf8, #f0e7d5);
+    }
+
+    .quote-icon {
+      font-family: "Cinzel", serif;
+      font-size: 35px;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .motivation blockquote {
+      font-family: "Cinzel", serif;
+      font-size: 20px;
+      color: var(--navy);
+      font-weight: 600;
+      margin: 8px 0;
+    }
+
+    .doric-divider {
+      width: 100%;
+      height: 9px;
+      margin: 14px 0;
+      border-top: 2px solid var(--gold);
+      border-bottom: 2px solid var(--gold);
+      position: relative;
+    }
+
+    .doric-divider::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      top: 1px;
+      background: repeating-linear-gradient(
+        90deg,
+        transparent 0 22px,
+        var(--gold) 22px 25px,
+        transparent 25px 44px
+      );
+    }
+
+    /* TECH STACK */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .tech-card {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .tech-icon {
+      flex: 0 0 45px;
+      width: 45px;
+      height: 45px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: #f1e7d1;
+      color: #9b762e;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .tech-info {
+      flex: 1;
+    }
+
+    .tech-info h3 {
+      font-family: "Inter", sans-serif;
+      font-size: 14px;
+      margin: 0 0 5px;
+    }
+
+    .level {
+      display: inline-block;
+      background: #e8edf2;
+      color: var(--navy);
+      border-radius: 20px;
+      padding: 3px 10px;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .learning {
+      margin-top: 18px;
+      padding: 20px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 8px;
+    }
+
+    .learning h3 {
+      color: var(--gold-light);
+      font-family: "Cinzel", serif;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .learning p {
+      color: #d4d9e0;
+      font-size: 13px;
+    }
+
+    /* PROJECTS */
+    .project-card {
+      display: grid;
+      grid-template-columns: 75px 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .project-symbol {
+      height: 75px;
+      display: grid;
+      place-items: center;
+      background: var(--navy);
+      color: var(--gold-light);
+      border-radius: 8px;
+      font-size: 32px;
+    }
+
+    .project-card h3 {
+      font-size: 19px;
+    }
+
+    .project-meta {
+      margin-top: 12px;
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      background: #f1e7d1;
+      color: #76591f;
+      border: 1px solid #e4d3ad;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 13px;
+      color: #8a682b;
+      font-weight: 700;
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    /* GITHUB */
+    .commit-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .commit-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      padding: 13px 16px;
+    }
+
+    .commit-icon {
+      color: #9b762e;
+      font-size: 20px;
+    }
+
+    .commit-item strong {
+      display: block;
+      font-size: 12px;
+      color: var(--navy);
+    }
+
+    .commit-item span {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    /* EDUCATION */
+    .table-wrap {
+      overflow-x: auto;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 500px;
+      font-size: 12px;
+    }
+
+    th {
+      background: var(--navy);
+      color: var(--gold-light);
+      text-align: left;
+      font-weight: 600;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    td {
+      color: var(--muted);
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:hover {
+      background: #f8f2e7;
+    }
+
+    /* PERSONAL IDENTITY */
+    .identity-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 13px;
+    }
+
+    .identity-item {
+      padding: 15px;
+      border-left: 3px solid var(--gold);
+      background: var(--white);
+      border-radius: 5px;
+      box-shadow: var(--shadow);
+    }
+
+    .identity-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      margin-bottom: 3px;
+    }
+
+    .identity-item strong {
+      color: var(--navy);
+      font-size: 13px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      color: #d4d9e0;
+      text-align: center;
+      padding: 28px 15px;
+      font-size: 12px;
+    }
+
+    footer .heart {
+      color: #e8a6a6;
+    }
+
+    footer a {
+      color: var(--gold-light);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-links {
+      margin-top: 8px;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 650px) {
+      .navbar {
+        flex-direction: column;
+        justify-content: center;
+        padding: 13px 0;
+        gap: 8px;
+      }
+
+      nav {
+        gap: 13px;
+      }
+
+      nav a {
+        font-size: 11px;
+      }
+
+      .hero {
+        min-height: 440px;
+        padding: 55px 15px;
+      }
+
+      .profile {
+        width: 125px;
+        height: 125px;
+      }
+
+      main {
+        padding: 38px 0;
+      }
+
+      .tech-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card {
+        grid-template-columns: 55px 1fr;
+        gap: 12px;
+      }
+
+      .project-symbol {
+        height: 55px;
+        font-size: 25px;
+      }
+
+      .identity-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <div class="container navbar">
+      <div class="logo">ISMA.DEV ✦</div>
+      <nav aria-label="Navigasi utama">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#tech">Tech Stack</a>
+        <a href="#project">Projects</a>
+        <a href="#commits">GitHub</a>
+        <a href="#education">Education</a>
+        <a href="#identity">Identity</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HOME -->
+  <section class="hero page active" id="home">
+    <div class="hero-content">
+      <img src="foto.jpg" alt="Foto profil Ismawati" class="profile">
+      <p class="eyebrow">ΧΑΙΡΕΤΕ · WELCOME</p>
+      <h1>Ismawati<span>.</span></h1>
+      <p class="hero-description">
+        Mahasiswa Teknik Informatika | Web Development
+      </p>
+      <a href="#about" class="hero-button">
+        Jelajahi Profil ↓
+      </a>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- ABOUT -->
+    <section class="section page" id="about">
+      <div class="section-heading">
+        <div class="section-number">I · THE JOURNEY</div>
+        <h2>Perjalanan & Motivasi</h2>
+        <p>Setiap perjalanan besar dimulai dari langkah kecil.</p>
+        <div class="ornament">✦</div>
+      </div>
+
+      <div class="card motivation">
+        <div class="quote-icon">“</div>
+        <blockquote>
+          Terus berkembang dan berkarya melalui teknologi.
+        </blockquote>
+        <div class="doric-divider"></div>
+        <p>
+          Saya percaya bahwa proses belajar, rasa ingin tahu,
+          dan kemauan untuk mencoba merupakan bagian penting
+          dalam mengembangkan diri di dunia teknologi.
+        </p>
+      </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section class="section page" id="tech">
+      <div class="section-heading">
+        <div class="section-number">II · DIVINE TOOLS</div>
+        <h2>Senjata & Kemampuan</h2>
+        <p>Teknologi yang saya pelajari dalam perjalanan akademik.</p>
+        <div class="ornament">⚡</div>
+      </div>
+
+      <div class="tech-grid">
+        <div class="card tech-card">
+          <div class="tech-icon">⌘</div>
+          <div class="tech-info">
+            <h3>HTML & CSS</h3>
+            <span class="level">Pemula</span>
+          </div>
+        </div>
+
+        <div class="card tech-card">
+          <div class="tech-icon">JS</div>
+          <div class="tech-info">
+            <h3>JavaScript</h3>
+            <span class="level">Pemula</span>
+          </div>
+        </div>
+
+        <div class="card tech-card">
+          <div class="tech-icon">⌥</div>
+          <div class="tech-info">
+            <h3>Git & GitHub</h3>
+            <span class="level">Pemula</span>
+          </div>
+        </div>
+
+        <div class="card tech-card">
+          <div class="tech-icon">◈</div>
+          <div class="tech-info">
+            <h3>SQL / MySQL</h3>
+            <span class="level">Pemula</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="learning">
+        <h3>✦ Sedang Dipelajari</h3>
+        <p>
+          Svelte, Express.js, TypeScript, dan pengembangan
+          aplikasi web fullstack.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section page" id="project">
+      <div class="section-heading">
+        <div class="section-number">III · THE ARTIFACTS</div>
+        <h2>Artefak & Proyek</h2>
+        <p>Karya yang dibuat sebagai bagian dari proses belajar.</p>
+        <div class="ornament">🫒</div>
+      </div>
+
+      <div class="card project-card">
+        <div class="project-symbol">⌘</div>
+        <div>
+          <h3>SIPERPUS</h3>
+          <p><strong>Sistem Informasi Perpustakaan</strong></p>
+          <p>
+            SIPERPUS merupakan aplikasi web untuk mengelola
+            data buku, kategori, dan rak perpustakaan.
+            Aplikasi ini dikembangkan sebagai proyek perkuliahan
+            dengan frontend dan backend yang terpisah.
+          </p>
+          <div class="project-meta">
+            <span class="tag">Svelte</span>
+            <span class="tag">Express.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">MySQL</span>
+          </div>
+          <p style="margin-top: 12px;">
+            <strong>Peran:</strong> Pengembangan aplikasi web
+          </p>
+          <a class="project-link"
+             href="https://github.com/USERNAME/REPOSITORY"
+             target="_blank" rel="noopener noreferrer">
+            Lihat proyek di GitHub ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GITHUB CONTRIBUTIONS -->
+    <section class="section page" id="commits">
+      <div class="section-heading">
+        <div class="section-number">IV · THE CHRONICLES</div>
+        <h2>Catatan Perjalanan GitHub</h2>
+        <p>Riwayat perubahan dan perkembangan proyek.</p>
+        <div class="ornament">✦</div>
+      </div>
+
+      <div class="commit-list">
+        <div class="commit-item">
+          <div class="commit-icon">✧</div>
+          <div>
+            <strong>feat: add profile website</strong>
+            <span>Menambahkan halaman profil</span>
+          </div>
+        </div>
+
+        <div class="commit-item">
+          <div class="commit-icon">✧</div>
+          <div>
+            <strong>feat: add biodata and photo</strong>
+            <span>Menambahkan biodata dan foto profil</span>
+          </div>
+        </div>
+
+        <div class="commit-item">
+          <div class="commit-icon">✧</div>
+          <div>
+            <strong>style: apply Greek mythology theme</strong>
+            <span>Menerapkan tema Mitologi Yunani</span>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top: 12px; text-align: center;">
+        <a class="project-link"
+           href="https://github.com/USERNAME/REPOSITORY/commits/main"
+           target="_blank" rel="noopener noreferrer">
+          Lihat riwayat commit ↗
+        </a>
+      </p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section page" id="education">
+      <div class="section-heading">
+        <div class="section-number">V · THE ACADEMY</div>
+        <h2>Perjalanan Pendidikan</h2>
+        <p>Tempat saya menimba ilmu dan mengembangkan diri.</p>
+        <div class="ornament">✦</div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Tahun</th>
+              <th>Institusi</th>
+              <th>Jurusan</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2024–Sekarang</td>
+              <td>[Nama Universitas]</td>
+              <td>Teknik Informatika</td>
+              <td>Mahasiswa</td>
+            </tr>
+            <tr>
+              <td>[Tahun]</td>
+              <td>[Nama SMA/SMK]</td>
+              <td>[Jurusan]</td>
+              <td>Lulus</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PERSONAL IDENTITY -->
+    <section class="section page" id="identity">
+      <div class="section-heading">
+        <div class="section-number">VI · THE HERO</div>
+        <h2>Identitas Pribadi</h2>
+        <p>Mengenal sosok di balik perjalanan ini.</p>
+        <div class="ornament">🫒</div>
+      </div>
+
+      <div class="identity-grid">
+        <div class="identity-item">
+          <span>Nama Lengkap</span>
+          <strong>Ismawati</strong>
+        </div>
+        <div class="identity-item">
+          <span>Nama Panggilan</span>
+          <strong>Isma</strong>
+        </div>
+        <div class="identity-item">
+          <span>NIM</span>
+          <strong>[Isi NIM kamu]</strong>
+        </div>
+        <div class="identity-item">
+          <span>Kota / Kabupaten</span>
+          <strong>[Isi kota atau kabupaten]</strong>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      Dibuat dengan <span class="heart">♥</span> oleh Ismawati
+      — P1 Pemrograman Platform
+    </p>
+    <div class="footer-links">
+      <a href="https://github.com/USERNAME"
+         target="_blank" rel="noopener noreferrer">
+        Profil GitHub
+      </a>
+      <a href="https://github.com/USERNAME/REPOSITORY"
+         target="_blank" rel="noopener noreferrer">
+        Repositori
+      </a>
+      <a href="[LINK VIDEO]">
+        Video P1
+      </a>
+    </div>
+    <p style="margin-top: 12px;">
+      © 2026 · Perjalanan belajar terus berlanjut.
+    </p>
+  </footer>
+
+  <script>
+    const pages = document.querySelectorAll(".page");
+    const navLinks = document.querySelectorAll("nav a");
+
+    function showPage() {
+      const pageId = window.location.hash.slice(1) || "home";
+      const selectedPage = document.getElementById(pageId);
+
+      // Sembunyikan semua halaman
+      pages.forEach((page) => {
+        page.classList.remove("active");
+      });
+
+      // Tampilkan halaman yang dipilih
+      if (selectedPage && selectedPage.classList.contains("page")) {
+        selectedPage.classList.add("active");
+      } else {
+        document.getElementById("home").classList.add("active");
+      }
+
+      // Tandai menu aktif
+      navLinks.forEach((link) => {
+        link.classList.toggle(
+          "active",
+          link.getAttribute("href") === "#" + pageId
+        );
+      });
+
+      // Kembali ke bagian atas setiap berpindah halaman
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+
+    window.addEventListener("hashchange", showPage);
+    showPage();
+  </script>
 </body>
 </html>
