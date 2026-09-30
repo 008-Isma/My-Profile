@@ -78,14 +78,14 @@ Elemen desain yang digunakan:
 ```text
 My-Profile/
 ├── index.html
-├── foto.jpg
+├── Foto Profile.jpeg
 └── README.md
 ```
 
 Keterangan:
 - `index.html` : file utama yang berisi struktur,
   tampilan, dan interaksi website.
-- `foto.jpg` : foto profil yang digunakan pada website.
+- `Foto Profile.jpeg` : foto profil yang digunakan pada website.
 - `README.md` : dokumentasi repositori.
 
 ## 🚀 Cara Menjalankan Website
@@ -93,7 +93,7 @@ Keterangan:
 1. Clone repositori ini:
 
    ```bash
-   git clone https://github.com/USERNAME/My-Profile.git
+   git clone https://github.com/008-Isma/My-Profile.git
    ```
 
 2. Masuk ke folder proyek:
@@ -111,10 +111,9 @@ Live Server pada Visual Studio Code.
 
 Website ini dapat diakses melalui GitHub Pages:
 
-[My Profile - Ismawati](https://USERNAME.github.io/My-Profile/)
+[My Profile - Ismawati](https://008-isma.github.io/My-Profile/biodata/)
 
-Ganti tautan di atas dengan alamat GitHub Pages
-repositori yang sebenarnya setelah website diterbitkan.
+[Akun GitHub - Ismawati](https://github.com/008-Isma)
 
 ## 📌 Tujuan Pembuatan
 
@@ -126,6 +125,12 @@ proyek, dan riwayat pendidikan.
 Melalui proyek ini, saya belajar membuat halaman web
 menggunakan HTML, CSS, dan JavaScript, serta mengenal
 penggunaan Git dan GitHub untuk mengelola kode sumber.
+
+## 🎥 Video
+
+Link video ini dapat diakses melalui alamat dibawah:
+
+[Youtube - Ismawati](https://youtu.be/U-AKkSqRTDg)
 
 ---
 
